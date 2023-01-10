@@ -9,9 +9,10 @@ float areaS(float &s); // function to calculate areaSquare
 float areaR(float &l, float &w); // function to calculate areaRectangle
 float areaT(float &b, float &h); // function to calculate areaTriangle
 float areaC(float &r); // function to calcualte areaC
-void exit(); // function to exit the whole program
 
-    float area;
+float area;
+#define pi 3.14159;
+
 
 int main()
 {
@@ -21,7 +22,6 @@ int main()
     float length = 0, width = 0, areaRectangle = 0;
     float base = 0, height = 0, areaTriangle = 0;
     float radius = 0, areaCircle = 0;
-    const float pi = 3.14159;
 
     choice = menuOptions();
 
@@ -103,21 +103,19 @@ int main()
             cin >> radius;
 
             // calculate the area of the circle => pi * r^2
-            areaCircle = pi * pow(radius, 2);
+            areaCircle = areaC(radius);
             cout << "The area is " << areaCircle << " sq. units";
-
+        
         case 5: // exit
             cout << "Thank you!\n";
             cout << "Press any key to continue...";
             getch();
             break;
         
-        default: 
+        default:
             cout << "Invalid choice. Please enter a number between 1 and 5.\n";
     } 
-
     return 0;
-
 }
 
 // function for menu options
@@ -175,5 +173,10 @@ float areaT(float &b, float &h)
     area = (b * h) / 2;
     return area;
 }
-float areaC(float r); // function to calcualte areaC
-void exit(); // function to exit the whole program
+
+// function to calcualte areaC
+float areaC(float &r)
+{
+    area = pow(r, 2) * pi;
+    return area;
+}
