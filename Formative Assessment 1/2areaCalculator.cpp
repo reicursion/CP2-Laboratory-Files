@@ -82,7 +82,7 @@ int main()
             cin >> base >> height;
 
             // calculate the area of the triangle => (1/2) x bh
-            areaTriangle = (base * height) / 2;
+            areaTriangle = areaT(base, height);
             cout << "The area is " << areaTriangle << " sq. units" << endl;
             break;
 
@@ -169,6 +169,11 @@ float areaR(float &l, float &w)
     return area;
 } 
 
-float areaT(float b, float h); // function to calculate areaTriangle
+ // function to calculate areaTriangle
+float areaT(float &b, float &h)
+{
+    area = (b * h) / 2;
+    return area;
+}
 float areaC(float r); // function to calcualte areaC
 void exit(); // function to exit the whole program
