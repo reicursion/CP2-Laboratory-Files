@@ -5,6 +5,11 @@ using namespace std;
 
 // functions breadcrumbs
 int menuOptions();
+float areaS(float &s); // function to calculate areaSquare
+float areaR(float &length, float w); // function to calculate areaRectangle
+float areaT(float b, float h); // function to calculate areaTriangle
+float areaC(float r); // function to calcualte areaC
+void exit(); // function to exit the whole program
 
 int main()
 {
@@ -21,7 +26,6 @@ int main()
     switch(choice)
     {
         case 1: // square
-            // title bar for square
             for (int i = 0; i < 75; i++){
             cout << "-";
             }
@@ -35,7 +39,8 @@ int main()
             cin >> side;
 
             // calculate area of the square => area = a x a
-            areaSquare = pow(side, 2);
+            areaSquare = areaS(side);
+
             cout << "\nThe area is " << areaSquare << " sq. units" << endl;
             break;
 
@@ -147,3 +152,17 @@ int menuOptions()
 
     return input;    
 }
+
+// function for calculat1ing the areaSquare
+float areaS(float &s)
+{
+    float area;
+    area = pow(s, 2);
+    return area;
+}
+
+
+float areaR(float l, float w); // function to calculate areaRectangle
+float areaT(float b, float h); // function to calculate areaTriangle
+float areaC(float r); // function to calcualte areaC
+void exit(); // function to exit the whole program
