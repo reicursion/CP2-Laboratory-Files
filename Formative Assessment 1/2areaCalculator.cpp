@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+#include <conio.h>
 using namespace std;
 
 // functions breadcrumbs
@@ -12,6 +13,8 @@ int main()
     float side = 0, areaSquare = 0;
     float length = 0, width = 0, areaRectangle = 0;
     float base = 0, height = 0, areaTriangle = 0;
+    float radius = 0, areaCircle = 0;
+    const float pi = 3.14159;
 
     choice = menuOptions();
 
@@ -76,6 +79,32 @@ int main()
             cout << "The area is " << areaTriangle << " sq. units" << endl;
             break;
 
+        case 4: // circle
+            // title bar for circle
+            for (int i = 0; i < 75; i++)
+            {
+                cout << "-";
+            }
+            cout << "\n\t\t\t  AREA OF CIRCLE" << endl;
+            for (int i = 0; i < 75; i++)
+            {
+                cout << "-";
+            }
+
+            // get user input of radius of the circle
+            cout << "\nEnter the radius: ";
+            cin >> radius;
+
+            // calculate the area of the circle => pi * r^2
+            areaCircle = pi * pow(radius, 2);
+            cout << "The area is " << areaCircle << " sq. units";
+
+        case 5: // exit
+            cout << "Thank you!\n";
+            cout << "Press any key to continue...";
+            getch();
+            break;
+        
         default: 
             cout << "Invalid choice. Please enter a number between 1 and 5.\n";
     } 
