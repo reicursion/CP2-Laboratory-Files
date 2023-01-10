@@ -10,18 +10,19 @@ int main()
     int choice = 0;
     //square
     float side = 0, areaSquare = 0;
+    float length = 0, width = 0, areaRectangle = 0;
+    float base = 0, height = 0, areaTriangle = 0;
 
     choice = menuOptions();
 
     switch(choice)
-    case 1: // square
-        {
+    {
+        case 1: // square
+            // title bar for square
             for (int i = 0; i < 75; i++){
             cout << "-";
             }
-    
             cout << "\n\t\t\t  AREA OF SQUARE" << endl;
-   
             for (int i = 0; i < 75; i++){
             cout << "-";
             }
@@ -34,10 +35,53 @@ int main()
             areaSquare = pow(side, 2);
             cout << "\nThe area is " << areaSquare << " sq. units" << endl;
             break;
-        }
 
+        case 2: //rectangle
+            // title bar for rectangle
+            for (int i = 0; i < 75; i++){
+            cout << "-";
+            }
+            cout << "\n\t\t\t  AREA OF RECTANGLE" << endl;
+            for (int i = 0; i < 75; i++){
+            cout << "-";
+            }
+
+            // get user input the length and width of the rectangle
+            cout << "\nEnter the length and with of the rectangle: ";
+            cin >> length >> width;
+
+            // calculate the area of the rectange => area = l x w
+            areaRectangle = length * width;
+            cout << "\nThe area is " << areaRectangle << " sq. units" << endl;
+            break;
+
+        case 3: // triangle
+            // title bar for triangle
+            for (int i = 0; i < 75; i++)
+            {
+                cout << "-";
+            }
+            cout << "\n\t\t\t  AREA OF TRIANGLE" << endl;
+            for (int i = 0; i < 75; i++)
+            {
+                cout << "-";
+            }
+
+            // get user input the base and height of the triangle
+            cout << "\nEnter the base and height of the triangle: ";
+            cin >> base >> height;
+
+            // calculate the area of the triangle => (1/2) x bh
+            areaTriangle = (base * height) / 2;
+            cout << "The area is " << areaTriangle << " sq. units" << endl;
+            break;
+
+        default: 
+            cout << "Invalid choice. Please enter a number between 1 and 5.\n";
+    } 
 
     return 0;
+
 }
 
 // function for menu options
