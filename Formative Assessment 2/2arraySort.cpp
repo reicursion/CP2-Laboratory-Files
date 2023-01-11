@@ -1,3 +1,5 @@
+// C++ program that gets desired size of an array, enter the elements
+// and the elements will be sorted using an algorithm in an ascending order
 #include <iostream>
 using namespace std;
 
