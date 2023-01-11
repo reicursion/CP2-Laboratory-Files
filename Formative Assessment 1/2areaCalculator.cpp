@@ -17,7 +17,6 @@ float area;
 int main()
 {
     int choice = 0;
-    //square
     float side = 0, areaSquare = 0;
     float length = 0, width = 0, areaRectangle = 0;
     float base = 0, height = 0, areaTriangle = 0;
@@ -57,7 +56,7 @@ int main()
             }
 
             // get user input the length and width of the rectangle
-            cout << "\nEnter the length and with of the rectangle: ";
+            cout << "\nEnter the length and width of the rectangle: ";
             cin >> length >> width;
 
             // calculate the area of the rectange => area = l x w
@@ -105,6 +104,7 @@ int main()
             // calculate the area of the circle => pi * r^2
             areaCircle = areaC(radius);
             cout << "The area is " << areaCircle << " sq. units";
+            break;
         
         case 5: // exit
             cout << "Thank you!\n";
