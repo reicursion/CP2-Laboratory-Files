@@ -20,7 +20,7 @@ int main(){
     cout << "Enter a second word (str2): ";
     cin.getline(str2, 100);
 
-    // use compare() function to copy str2 to str1
+    // use strcpy() function to copy str2 to str1
     strcpy(str1, str2);
 
     // output the value of str1
