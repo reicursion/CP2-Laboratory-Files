@@ -19,7 +19,7 @@ int main(){
     cout << "Enter a second word (str2): ";
     cin.getline(str2, 100);
 
-    // use compare() function to compare 2 strings
+    // use strcmp() function to compare 2 strings
     res = strcmp(str1, str2);
 
     // output if the two strings are equal (equal) or not (positive or)
