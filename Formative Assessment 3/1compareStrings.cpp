@@ -14,15 +14,15 @@ int main(){
 
     // get user input for first word (str1)
     cout << "\nEnter a first word (str1): ";
-    cin >> str1;
+    cin.getline(str1, 100);
     // get user input for second word (str2)
     cout << "Enter a second word (str2): ";
-    cin >> str2;
+    cin.getline(str2, 100);
 
     // use compare() function to compare 2 strings
     res = strcmp(str1, str2);
 
-    // output if the two strings are equal (equal) or not (positive or negative)
+    // output if the two strings are equal (equal) or not (positive or)
     if (res == 0){
         cout << "equal\n";
     } else if (res > 0) {
