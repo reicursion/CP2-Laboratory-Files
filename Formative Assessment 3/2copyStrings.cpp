@@ -9,7 +9,6 @@ int main(){
     char str1[100];
     char str2[100];
     string str3;
-    int res;
 
     titleBar();
 
