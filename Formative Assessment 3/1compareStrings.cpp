@@ -1,13 +1,13 @@
 #include<iostream>
-#include<string>
+#include<cstring>
 using namespace std;
 
 void titleBar(); //function for the title bar
 
 int main(){
     // initialize values
-    string str1;
-    string str2;
+    char str1[100];
+    char str2[100];
     int res;
 
     titleBar();
@@ -20,13 +20,15 @@ int main(){
     cin >> str2;
 
     // use compare() function to compare 2 strings
-    res = str1.compare(str2);
+    res = strcmp(str1, str2);
 
-    // output if the two strings are equal (positive) or not (negative)
+    // output if the two strings are equal (equal) or not (positive or negative)
     if (res == 0){
-        cout << "positive" << endl;
+        cout << "equal\n";
+    } else if (res > 0) {
+        cout << "positive\n";
     } else {
-        cout << "negative" << endl;
+        cout << "negative\n";
     }
 
     return 0;
