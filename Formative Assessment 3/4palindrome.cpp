@@ -1,27 +1,27 @@
 #include<iostream>
 #include<cstring>
+#include<algorithm>
 using namespace std;
 
 void titleBar(); //function for the title bar
 
 int main(){
+
     // initialize values
     char str1[100];
-    char str2[100];
-
+    string str_word(str1);
+-
     titleBar();
 
     // ask user input for a word
-    cout << "Enter a word: ";
+    cout << "\nEnter a word: ";
     cin.getline(str1,100);
 
-    // reverse the word and store it in a new variable
-    for (int i = strlen(str1) - 1; i >= 0; i--){
-        str2[strlen(str1) - 1 - i] = str1[i];
-    }
+    // reverse the word
+    reverse(str_word.begin(), str_word.end());
 
     // compare the two words using if statements
-    if (strcmp(str1, str2) == 0){
+    if (str_word == str1){
         cout << str1 << " is a palindrome";
     } else {
         cout << str1 << " is not a palindrome";
