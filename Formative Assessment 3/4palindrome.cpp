@@ -6,25 +6,24 @@ using namespace std;
 void titleBar(); //function for the title bar
 
 int main(){
-
-    // initialize values
+    // intiialize variables
     char str1[100];
-    string str_word(str1);
--
-    titleBar();
+
+    titleBar(); 
 
     // ask user input for a word
     cout << "\nEnter a word: ";
-    cin.getline(str1,100);
+    cin.getline(str1, 100);
 
-    // reverse the word
+    // reverse the user inputted word
+    string str_word(str1);
     reverse(str_word.begin(), str_word.end());
 
-    // compare the two words using if statements
-    if (str_word == str1){
-        cout << str1 << " is a palindrome";
+    // if else statement to check if it is a palindrome or not
+    if (str_word == str1) {
+        cout << str1 << " is a palindrome." << endl;
     } else {
-        cout << str1 << " is not a palindrome";
+        cout << str1 << " is not a palindrome." << endl;
     }
 
     return 0;
