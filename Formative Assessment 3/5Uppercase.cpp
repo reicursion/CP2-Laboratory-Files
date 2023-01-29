@@ -13,11 +13,15 @@ int main(){
     // for loop to get through each letter
     for (int i = 0; i < strlen(str); i++){
         // if else loop to check if it is a space or not
+        // if statement to convert the first letter to uppercase always
         if (i == 0){
             str[i] = toupper(str[i]);
-        // else if statement, convert letter to uppercase if previous charcter is a space
+        // else if to convert to uppercase if previous is space
         } else if (str[i - 1] == ' '){
             str[i] = toupper(str[i]);
+        // else statement to convert all other letters to lowercase
+        } else {
+            str[i] = tolower(str[i]);
         }
     }
 
