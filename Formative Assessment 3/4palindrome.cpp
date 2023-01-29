@@ -20,6 +20,13 @@ int main(){
         str2[strlen(str1) - 1 - i] = str1[i];
     }
 
+    // compare the two words using if statements
+    if (strcmp(str1, str2) == 0){
+        cout << str1 << " is a palindrome";
+    } else {
+        cout << str1 << " is not a palindrome";
+    }
+
     return 0;
 }
 
