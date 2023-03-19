@@ -1,15 +1,14 @@
 Name: kai
 Course: csds
 Email: kai@mail.com
-Contact: 093747345
+Contact: 0975735835
 
 Name: krn
 Course: bio
 Email: krn@mail.com
-Contact: 0987328753
+Contact: 0945876645
 
 Name: rai
 Course: eng
 Email: rai@mil.com
-Contact: 09238747853
-
+Contact: 0957476623234
