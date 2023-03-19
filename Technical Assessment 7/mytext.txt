@@ -1,0 +1,15 @@
+Name: kai
+Course: csds
+Email: kai@mail.com
+Contact: 0975735835
+
+Name: krn
+Course: bio
+Email: krn@mail.com
+Contact: 0945876645
+
+Name: rai
+Course: eng
+Email: rai@mil.com
+Contact: 0957476623234
+
