@@ -13,9 +13,11 @@ class Shape {
             width = 0;
         }
 
-        void get_data();
+        void get_data() {
+        }
 
-        double display_area();
+        double display_area() {
+        }
     };
 
 // derived class Triangle from Shape class
@@ -50,19 +52,22 @@ int main() {
     Shape *s;
     double area;
 
-    // Triangle
+    // Triangl
     s = new Triangle();
-    s->get_data(); // get_data() will be called from the derived class Triangle
-    area = s->display_area(); // display_area() will be called from the derived class Triangle
-    cout << "Area of triangle is " << area << endl;
-    delete s;
+    
+   s->get_data();
+   area = s->display_area();
+   cout << "Area of triangle is " << area << endl;
+   delete s;
 
-    // Rectangle
-    s = new Rectangle(); // s will be assigned to the derived class Rectangle
-    s->get_data();
-    area = s->display_area();
-    cout << "Area of rectangle is " << area << endl;
+   // Rectangle
+   s = new Rectangle();
+   s->get_data();
+   area = s->display_area();
+   cout << "Area of rectangle is " << area << endl;
+   delete s;
 
+   return 0;
     delete s;
     return 0;
 }
